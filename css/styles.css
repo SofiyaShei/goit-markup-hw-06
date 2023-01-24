@@ -690,16 +690,16 @@ div.team-member-description {
   align-items: center;
 }
 .subscription-header {
+  display: flex;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.6;
+  color: var(--light-text-color);
 }
 .subscription-content {
   margin-left: 93px;
 }
-.subscription-header {
-  display: flex;
-}
+
 .subscription-form {
   display: flex;
 }
@@ -731,7 +731,6 @@ div.team-member-description {
 
 .subscription-icon {
   margin-left: 10px;
-  fill: var(--light-text-color);
 }
 
 .subscription-button {
@@ -771,6 +770,7 @@ div.team-member-description {
 }
 .modal-heading {
   display: flex;
+  color: var(--dark-text-color);
   margin-bottom: 30px;
   font-weight: 700;
   font-size: 20px;
