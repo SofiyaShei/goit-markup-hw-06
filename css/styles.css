@@ -134,7 +134,7 @@ img {
   height: 4px;
   border-radius: 2px;
 }
-.site-nav .link-current {
+.site-nav .current-link {
   color: var(--accent-color);
 }
 .site-nav .link:hover,
@@ -163,6 +163,8 @@ img {
   letter-spacing: 0.02em;
   align-items: center;
   justify-content: center;
+  transition: color 250ms var(--transition-timing-function);
+  transition: fill var(--accent-color);
 }
 
 .auth-nav .item + .item {
@@ -216,7 +218,7 @@ img {
   min-width: 216px;
   text-align: center;
   cursor: pointer;
-  transition: color 250ms var(--transition-timing-function);
+  transition: background-color 250ms var(--transition-timing-function);
 }
 
 .hero-button:hover,
@@ -308,6 +310,8 @@ img {
   fill: var(--primary-icon-color);
   align-items: center;
   justify-content: center;
+  border: var(--medium-text-color);
+  fill: var(--primary-icon-color);
 }
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
@@ -484,7 +488,7 @@ div.team-member-description {
   font-family: Roboto;
   position: absolute;
   top: 0;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   color: var(--light-text-color);
   padding: 40px;
@@ -492,7 +496,7 @@ div.team-member-description {
   background-color: rgba(33, 150, 243, 0.9);
   height: 100%;
   transform: translateY(100%);
-  transition: transform 250ms linear var(--transition-timing-function);
+  transition: transform 250ms var(--transition-timing-function);
 }
 .portfolio-item:nth-child(3n) {
   margin: 0;
@@ -539,6 +543,9 @@ div.team-member-description {
   display: flex;
   flex-direction: column;
   gap: 9px;
+}
+.address-item {
+  color: var(--accent-color);
 }
 .address-item:not(:nth-last-child(n)) {
   margin-bottom: 9px;
@@ -643,7 +650,6 @@ div.team-member-description {
   position: absolute;
   min-width: 528px;
   min-height: 581px;
-  z-index: -3;
   top: 50%;
   left: 50%;
   background-color: var(--light-background-color);
@@ -684,16 +690,19 @@ div.team-member-description {
   align-items: center;
 }
 .subscription-header {
-  display: flex;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.subscription-content {
   margin-left: 93px;
 }
-
+.subscription-header {
+  display: flex;
+}
 .subscription-form {
   display: flex;
-  flex-direction: row;
-  align-items: center;
 }
-
 .subscription-input {
   display: flex;
   box-sizing: border-box;
@@ -701,7 +710,6 @@ div.team-member-description {
   height: 50px;
   width: 358px;
   margin-top: 20px;
-  margin-left: 93px;
   font-size: 16px;
   background-color: #2f303a;
   color: var(--accent-color);
@@ -722,26 +730,30 @@ div.team-member-description {
 }
 
 .subscription-icon {
-  padding-left: 10px;
+  margin-left: 10px;
   fill: var(--light-text-color);
 }
 
 .subscription-button {
-  font-style: Roboto;
+  display: flex;
   font-weight: 700;
   font-size: 16px;
   padding: 10px 0px;
-  text-align: center;
   width: 200px;
   height: 50px;
+  border: none;
   margin-left: 12px;
   margin-top: 20px;
+  align-items: center;
+  justify-content: center;
   background-color: var(--accent-color);
   color: var(--light-text-color);
   border-radius: 4px;
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: var(--transition-timing-function);
+  letter-spacing: 0.03em;
+  cursor: pointer;
 }
 .modal-content {
   display: flex;
@@ -770,6 +782,7 @@ div.team-member-description {
 .modal-form {
   display: flex;
   flex-direction: column;
+  padding: 40px;
 }
 
 .modal-icon-wrapper {
@@ -795,6 +808,8 @@ div.team-member-description {
 }
 
 .modal-icon {
+  width: 18px;
+  height: 18px;
   position: absolute;
   top: 50%;
   left: 15px;
@@ -847,11 +862,25 @@ div.team-member-description {
 }
 
 .modal-button {
+  color: var(--light-text-color);
+  font-weight: 700;
+  font-size: 16px;
   width: 200px;
-  padding: 10px 80px;
-  margin-left: 124px;
+  height: 50px;
+  margin-left: 164px;
+  margin-right: 164px;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--accent-color);
+  text-align: center;
+  justify-content: center;
 }
-
+.icon {
+  fill: var(--light-text-color);
+}
+.subscription-icon {
+  fill: var(--light-background-color);
+}
 .agree-check {
   display: flex;
   justify-content: center;
