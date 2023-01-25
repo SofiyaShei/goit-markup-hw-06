@@ -163,8 +163,7 @@ img {
   letter-spacing: 0.02em;
   align-items: center;
   justify-content: center;
-  transition: color 250ms var(--transition-timing-function);
-  transition: fill var(--accent-color);
+  transition: color, fill 250ms var(--transition-timing-function);
 }
 
 .auth-nav .item + .item {
@@ -396,6 +395,7 @@ img {
   align-items: center;
   justify-content: center;
   fill: var(--primary-icon-color);
+  transition: color 250ms var(--transition-timing-function);
 }
 
 .team-soc-link:hover,
@@ -648,11 +648,11 @@ div.team-member-description {
 
 .modal {
   position: absolute;
-  min-width: 528px;
-  min-height: 581px;
+  width: 528px;
+  height: 581px;
   top: 50%;
   left: 50%;
-  background-color: var(--light-background-color);
+  background-color: var(--light-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -677,7 +677,10 @@ div.team-member-description {
   align-items: center;
   justify-content: center;
 }
-
+.modal-close-button:hover,
+.modal-close-button:focus {
+  fill: var(--accent-color);
+}
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -690,6 +693,7 @@ div.team-member-description {
   align-items: center;
 }
 .subscription-header {
+  text-transform: uppercase;
   display: flex;
   font-weight: 700;
   font-size: 14px;
@@ -769,12 +773,11 @@ div.team-member-description {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-heading {
-  display: flex;
   color: var(--dark-text-color);
-  margin-bottom: 30px;
+  margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
 }
@@ -787,7 +790,7 @@ div.team-member-description {
 
 .modal-icon-wrapper {
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
 }
 
 .modal-label-text {
@@ -799,7 +802,7 @@ div.team-member-description {
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
@@ -834,6 +837,7 @@ div.team-member-description {
   transition-property: border, border-radius;
   transition-duration: 250ms;
   transition-timing-function: var(--transition-timing-function);
+  outline: none;
 }
 
 .modal-textarea {
@@ -867,13 +871,19 @@ div.team-member-description {
   font-size: 16px;
   width: 200px;
   height: 50px;
-  margin-left: 164px;
-  margin-right: 164px;
+  margin: 0 auto;
   border-radius: 4px;
   border: none;
   background-color: var(--accent-color);
   text-align: center;
   justify-content: center;
+  cursor: pointer;
+  transition: color 250ms var(--transition-timing-function);
+}
+.modal-button:hover,
+.modal-button:focus {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .icon {
   fill: var(--light-text-color);
@@ -899,17 +909,12 @@ div.team-member-description {
   width: 16px;
   height: 16px;
   margin-right: 7px;
-  fill: none;
+  fill: var(--light-text-color);
   border: 2px solid var(--dark-text-color);
   border-radius: 2px;
   transition: border-color 250ms var(--transition-timing-function),
     background-color 250ms var(--transition-timing-function),
     fill 250ms var(--transition-timing-function);
-}
-
-.agree-check .checkmark:focus + .icon,
-.agree-check .checkmark:checked:focus + .icon {
-  outline: 2px solid var(--dark-text-color);
 }
 
 .agree-check .checkmark:checked + .icon {
