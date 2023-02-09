@@ -155,6 +155,7 @@ img {
   fill: var(--medium-text-color);
 }
 .auth-nav .link {
+  display: flex;
   color: var(--medium-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -648,6 +649,7 @@ div.team-member-description {
   height: 581px;
   top: 50%;
   left: 50%;
+  padding: 40px;
   background-color: var(--light-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -694,6 +696,8 @@ div.team-member-description {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.6;
+  margin-top: 20px;
+  margin-bottom: 12px;
   color: var(--light-text-color);
 }
 .subscription-content {
@@ -706,10 +710,10 @@ div.team-member-description {
 .subscription-input {
   display: flex;
   box-sizing: border-box;
+  outline: none;
   padding-left: 16px;
   height: 50px;
   width: 358px;
-  margin-top: 20px;
   font-size: 16px;
   background-color: #2f303a;
   color: var(--accent-color);
@@ -742,7 +746,6 @@ div.team-member-description {
   height: 50px;
   border: none;
   margin-left: 12px;
-  margin-top: 20px;
   align-items: center;
   justify-content: center;
   background-color: var(--accent-color);
@@ -770,7 +773,7 @@ div.team-member-description {
 }
 .modal-heading {
   color: var(--dark-text-color);
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -781,7 +784,6 @@ div.team-member-description {
 .modal-form {
   display: flex;
   flex-direction: column;
-  padding: 40px;
 }
 
 .modal-icon-wrapper {
@@ -841,6 +843,7 @@ div.team-member-description {
   margin-bottom: 20px;
   padding: 12px 16px;
   resize: none;
+  outline: none;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
@@ -874,7 +877,8 @@ div.team-member-description {
   text-align: center;
   justify-content: center;
   cursor: pointer;
-  transition: color 250ms var(--transition-timing-function);
+  transition: background-color,
+    box shadow 250ms var(--transition-timing-function);
 }
 .modal-button:hover,
 .modal-button:focus {
